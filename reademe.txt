@@ -1,0 +1,6 @@
+单页面应用的优化方法：
+1、通过用optimization.splitChunks对公共代码进行打包到同一个文件中
+2、通过用 UglifyjsWebpackPlugin的plugins对代码进行压缩
+3、通过对路由进行动态加载，需要在output中配置chunkFilename和publicPath
+    同时在路由的引入需要用到webpack中的import()方法，该方法返回个promise
+    可以搭配async   await使用
